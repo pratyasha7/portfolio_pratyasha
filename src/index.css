@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600;700&family=Fredoka:wght@400;500;600;700&family=Playpen+Sans:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Inter", sans-serif;
+  --font-display: "DynaPuff", cursive;
+  --font-handwritten: "Playpen Sans", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f081c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c1e5a;
+  border: 2px solid #0f081c;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
+
+/* Elegant desk sidebar custom scrollbar */
+.desk-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c3b5a6 #faf6f0;
+}
+.desk-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.desk-scrollbar::-webkit-scrollbar-track {
+  background: #faf6f0;
+  border-radius: 8px;
+}
+.desk-scrollbar::-webkit-scrollbar-thumb {
+  background: #c3b5a6;
+  border-radius: 8px;
+}
+.desk-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8a7a6c;
+}
+
+/* Elegant mobile custom scrollbar */
+.mobile-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d8ceb9 #fcf9f5;
+}
+.mobile-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.mobile-scrollbar::-webkit-scrollbar-track {
+  background: #fcf9f5;
+  border-radius: 8px;
+}
+.mobile-scrollbar::-webkit-scrollbar-thumb {
+  background: #d8ceb9;
+  border-radius: 8px;
+}
+.mobile-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a39485;
+}
+
+.glow-mesh {
+  position: absolute;
+  filter: blur(140px);
+  opacity: 0.2;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .glow-mesh {
+  opacity: 0.35;
+}
+
+/* Retro and Kawaii Theme Utilities */
+.text-handwritten {
+  font-family: "Playpen Sans", cursive;
+}
+
+.text-display-bouncy {
+  font-family: "DynaPuff", cursive;
+}
+
+.retro-window-border {
+  border: 3px solid #2e1a47;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.retro-btn {
+  border: 2px solid #2e1a47;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+.retro-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.tape-pink {
+  position: relative;
+}
+.tape-pink::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  width: 65px;
+  height: 22px;
+  background-color: rgba(244, 63, 94, 0.45);
+  border-left: 3px dashed rgba(255, 255, 255, 0.3);
+  border-right: 3px dashed rgba(255, 255, 255, 0.3);
+  transform: rotate(-8deg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.tape-yellow {
+  position: relative;
+}
+.tape-yellow::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  width: 65px;
+  height: 22px;
+  background-color: rgba(253, 224, 71, 0.5);
+  border-left: 3px dashed rgba(255, 255, 255, 0.3);
+  border-right: 3px dashed rgba(255, 255, 255, 0.3);
+  transform: rotate(6deg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Twinkling Star Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.1) rotate(15deg); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.sparkle-slow {
+  animation: twinkle 5s ease-in-out infinite;
+}
+
+.sparkle-fast {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
