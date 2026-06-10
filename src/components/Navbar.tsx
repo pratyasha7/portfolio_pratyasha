@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Book, Laptop, FlaskConical, Terminal, Trophy, Mail, Github, Linkedin, HelpCircle, Menu, X, Compass } from "lucide-react";
+import { Book, Laptop, FlaskConical, Terminal, Trophy, Mail, Github, Linkedin, HelpCircle, Menu, X } from "lucide-react";
 
 interface NavbarProps {
   theme: "dark" | "light";
@@ -106,7 +106,6 @@ export default function Navbar({ theme }: NavbarProps) {
                           <div className="text-[10px] font-handwritten text-gray-500 mt-0.5">{item.sub}</div>
                         </div>
                       </div>
-                      <div className={`w-2.5 h-2.5 rounded-full ${item.color}`} />
                     </a>
                   );
                 })}
@@ -140,7 +139,7 @@ export default function Navbar({ theme }: NavbarProps) {
             Navigation
           </div>
 
-          {/* List of Navigation index items mapped directly from the screenshot */}
+          {/* List of Navigation index items mapped directly from the layout */}
           <nav className="space-y-4">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSegment === item.href.slice(1);
@@ -164,14 +163,6 @@ export default function Navbar({ theme }: NavbarProps) {
                       <div className="text-xs font-bold leading-tight uppercase font-mono">{item.label}</div>
                       <div className="text-[10px] font-handwritten text-slate-500 mt-0.5">{item.sub}</div>
                     </div>
-                  </div>
-                  
-                  {/* Matching aesthetic status color dot */}
-                  <div className="flex items-center gap-2">
-                    {isActive && (
-                      <span className="w-1 h-3 bg-[#7a6555] rounded-full hidden group-hover:inline-block animate-pulse" />
-                    )}
-                    <div className={`w-2 h-2 rounded-full ${item.color} shadow-sm shrink-0`} />
                   </div>
                 </a>
               );
