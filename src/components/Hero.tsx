@@ -243,7 +243,7 @@ export default function Hero() {
             
             <div className="font-mono text-[10px] font-black uppercase text-emerald-700 tracking-wider mb-2.5 mt-2 flex items-center justify-between pb-1 border-b border-emerald-200/50">
               <span>Currently</span>
-              <span>💼</span>
+              
             </div>
 
             <ul className="text-xs font-handwritten font-bold space-y-2 mt-1">
