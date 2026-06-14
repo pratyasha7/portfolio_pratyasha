@@ -82,12 +82,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     period: "Jan 2026 – Present",
     linkedinUrl: "https://www.linkedin.com/company/harit-vikas/posts/?feedView=all",
     bullets: [
-      "Refactored the platform’s core architecture to introduce a modular, extensible component model, reducing feature integration overhead and improving maintainability across a 15+ module codebase.",
-      "Designed and implemented a unified Source Adapter layer abstracting data ingestion from heterogeneous sources — Google Firestore, REST APIs, and GeoTIFF satellite imagery — enforcing a consistent data validation interface and reducing new-source integration time by ~60%.",
-      "Engineered a geospatial batch-placement algorithm to auto-generate and persist 500+ location markers from coordinate datasets, reducing manual data entry overhead by 90% and eliminating user-input errors through schema-level data validation.",
-      "Built a satellite-driven NDVI data pipeline to ingest, process, and visualize plant health time-series data, enabling scalable environmental monitoring across multiple project sites.",
-      "Integrated bulk data ingestion via Excel/CSV upload and implemented cluster-level delete operations, enabling users to manage thousands of geospatial data points with enforced data integrity constraints.",
-      "Improved platform reliability by diagnosing and resolving critical dependency conflicts and implementing regression-safe update practices, ensuring system stability across iterative releases."
+      "Developing Saaya, an open-source, map-first climate platform designed to visualize environmental data and create digital shadows of real-world places, supporting academic research. Reorganized the core React/TypeScript frontend and integrated client-side Firebase data adapters, reducing database integration overhead by 60%. Engineered an interactive 24-hour Leaflet timeline player for smooth coordinate tracking , integrated satellite NDVI overlays , and built bulk Excel/CSV ingestion tools, while resolving Webpack conflicts to ensure robust platform stability."
     ]
   },
   {
@@ -132,9 +127,13 @@ export const PROJECTS_DATA: Project[] = [
     category: "Systems/Backend",
     description: "Production architecture for automated environmental reporting with satellite pipelines, featuring a unified source adapter layer and automated georeferenced data management.",
     bullets: [
-      "Designed and implemented a unified Source Adapter layer abstracting data ingestion from Google Firestore, REST APIs, and GeoTIFF satellite imagery.",
-      "Engineered a geospatial batch-placement algorithm to auto-generate and persist 500+ location markers from coordinate datasets.",
-      "Built a satellite-driven NDVI data pipeline to ingest, process, and visualize plant health time-series data for scalable environmental monitoring."
+      "Reorganized the platform’s core React frontend to use reusable, modular components, which simplified adding new features and made the 15+ module codebase easier to maintain.",
+      "Built a unified data adapter layer in TypeScript that connects the frontend directly to Google Firestore, REST APIs, and satellite imagery . This validated incoming data and reduced the time to integrate new data sources by ~60%.",
+      "Created an interactive 24-hour timeline player on a React-Leaflet map. Users can play, pause, or scrub through the timeline to see smooth, step-by-step movements of tracking pointers (such as livestock) on the map. ",
+      "Developed interactive charts and map overlays that display satellite-based plant health (NDVI) data over time, helping users monitor environmental changes",
+      "Created an automated map placement tool that automatically generates over 500 location markers on the map from coordinate datasets. This cut down manual data entry time by 90% and prevented input errors by validating data formats.",
+      "Built a feature to upload bulk map data from Excel/CSV files and implemented group-deletion tools using Leaflet marker clusters, letting users manage thousands of map points at once while validating data for errors.",
+      "Fixed critical package and compiler conflicts (including Webpack and TypeScript configuration targets), which improved the platform's stability and ensured updates do not break existing features."
     ],
     technologies: ["Python", "Firestore", "REST APIs", "GeoTIFF", "NDVI Pipeline"],
     gitlabUrl: "https://gitlab.com/project-saaya/saaya/-/tree/feature/poi-marker-update?ref_type=heads",
