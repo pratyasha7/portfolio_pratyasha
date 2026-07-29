@@ -43,7 +43,7 @@ export const SKILLS_MATRIX: SkillCategory[] = [
       { name: "SVM / Random Forest / Decision Trees", level: 88 },
       { name: "Naive Bayes / KNN / K-Means", level: 85 },
       { name: "Regularization (Ridge & Lasso)", level: 88 },
-      { name: "Data Preprocessing (Pandas & NumPy)", level: 94 }
+      { name: "Data Preprocessing (Pandas & NumPy", level: 94 }
     ]
   },
   {
@@ -109,15 +109,17 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: "project-1",
-    title: "AI-Based Research Paper Discovery System with Query Disambiguation (Ongoing)",
+    title: "Redrob Nexus — AI-Native Research Operating System (Ongoing)",
     category: "AI/ML",
-    description: "Developing a scalable NLP-based information retrieval system to query, rank, and surface scientific research papers from open-access sources (arXiv API), ordered by recency and relevance score.",
+    description: "Architecting an AI-native research operating system and professional network designed to consolidate paper discovery, collaborative writing, and social research sharing into a unified ecosystem.",
     bullets: [
-      "Implementing text preprocessing and concept extraction using SpaCy and regex.",
-      "Designing an abbreviation disambiguation module to resolve ambiguous queries (e.g., “POP”) via user-guided selection.",
-      "Building a context-aware search pipeline with query-to-concept mapping and NLP-driven concept extraction, enabling low-latency resolution of ambiguous user queries through an abbreviation disambiguation module."
+      "Designing a hybrid semantic search and retrieval pipeline (combining BM25 keyword matching with dense vector embeddings and rerankers) to facilitate context-aware, natural language queries across open-source scientific APIs.",
+      "Architecting an agentic orchestration system utilizing a multi-agent planning framework—incorporating specialized Copilot, Retrieval, Synthesis, and Knowledge Graph agents—to automate complex analytical workflows.",
+      "Developing a researcher-exclusive social media layer allowing peers to publish paper links, host AI-generated summaries, and interact through comments, likes, and professional connection maps.",
+      "Implementing multi-author collaborative writing environments alongside private workspaces equipped with dynamic tools to organize, categorize, and draft scientific research papers.",
+      "Integrating a structured RAG (Retrieval-Augmented Generation) pipeline paired with Neo4j graph databases to securely feed factual context into collaborative documents and verify citations."
     ],
-    technologies: ["Python", "SpaCy", "Regex", "arXiv API", "NLP"],
+    technologies: ["Python", "FastAPI", "LLMs (GPT-4o/Claude)", "Pinecone/Weaviate", "Neo4j Graph DB", "WebSockets", "RAG", "Multi-Agent Systems", "TypeScript"],
     githubUrl: "https://github.com/pratyasha7/AI-Scientific-Paper-Knowledge-Engine",
     demoUrl: "#"
   },
