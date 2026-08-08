@@ -1,36 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { MapPin, GraduationCap, Star, Coffee, FileText, ArrowDown, HelpCircle, Percent } from "lucide-react";
-import { RESUME_BASE64 } from "../resume-base64";
+import { MapPin, GraduationCap, FileText, Percent } from "lucide-react";
 
 export default function Hero() {
   const [steamArr] = useState([0, 1, 2]);
-
-  const handleDownloadResume = () => {
-    try {
-      const binaryString = window.atob(RESUME_BASE64);
-      const len = binaryString.length;
-      const bytes = new Uint8Array(len);
-      for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-      }
-      const blob = new Blob([bytes], { type: "application/pdf" });
-      const url = URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Pratyasha_Basak_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      setTimeout(() => {
-        URL.revokeObjectURL(url);
-      }, 100);
-    } catch (error) {
-      console.error("Error generating local PDF copy:", error);
-    }
-  };
 
   return (
     <section id="about" className="relative pt-12 pb-16 overflow-visible">
@@ -97,7 +70,6 @@ export default function Hero() {
               className="inline-flex items-center gap-1.5 font-handwritten text-xs font-black text-rose-500 bg-[#fff0f3] border border-rose-200/55 rounded-full px-3.5 py-1.5 rotate-[-1deg]"
             >
               <span>Curiosity drives everything I build</span>
-              {/* <span className="text-amber-400 text-[14px] animate-pulse">✦</span> */}
             </motion.div>
           </div>
 
@@ -135,27 +107,24 @@ export default function Hero() {
                 <h3 className="font-sans text-xs font-bold leading-tight text-slate-800">Kolkata, WB</h3>
                 <p className="text-[11px] text-slate-500 font-medium mt-1">India</p>
               </div>
-              {/* <p className="text-[10px] font-mono text-slate-400 mt-2">Home Base 📍</p> */}
             </motion.div>
 
             {/* Card 3: Academic CGPA Score */}
-            {/* Card 3: Academic CGPA Score */}
-<motion.div
-  whileHover={{ y: -3, scale: 1.01 }}
-  className="bg-white p-5 rounded-2xl border-2 border-[#e6decb] shadow-[4px_4px_0px_#8a7f6e] flex flex-col justify-between min-h-[140px] relative overflow-hidden"
->
-  {/* Decorative binder pushpin */}
-  <div className="absolute top-2 left-2 w-3.5 h-3.5 bg-rose-400 rounded-full border border-rose-500 shadow-sm flex items-center justify-center">
-    <div className="w-1 h-1 bg-white rounded-full" />
-  </div>
-  <div className="pt-2">
-    {/* Swapped in Percent icon with high-contrast bold stroke styling */}
-    <Percent size={20} strokeWidth={2.5} className="text-amber-500 mb-2.5" />
-    <h3 className="font-sans text-xs font-bold leading-tight text-slate-800">CGPA</h3>
-    <p className="font-handwritten text-md font-black text-rose-600 mt-0.5">8.65 / 10</p>
-  </div>
-  <p className="text-[10px] font-mono text-slate-400 mt-2">Cumulative score</p>
-</motion.div>
+            <motion.div
+              whileHover={{ y: -3, scale: 1.01 }}
+              className="bg-white p-5 rounded-2xl border-2 border-[#e6decb] shadow-[4px_4px_0px_#8a7f6e] flex flex-col justify-between min-h-[140px] relative overflow-hidden"
+            >
+              {/* Decorative binder pushpin */}
+              <div className="absolute top-2 left-2 w-3.5 h-3.5 bg-rose-400 rounded-full border border-rose-500 shadow-sm flex items-center justify-center">
+                <div className="w-1 h-1 bg-white rounded-full" />
+              </div>
+              <div className="pt-2">
+                <Percent size={20} strokeWidth={2.5} className="text-amber-500 mb-2.5" />
+                <h3 className="font-sans text-xs font-bold leading-tight text-slate-800">CGPA</h3>
+                <p className="font-handwritten text-md font-black text-rose-600 mt-0.5">8.65 / 10</p>
+              </div>
+              <p className="text-[10px] font-mono text-slate-400 mt-2">Cumulative score</p>
+            </motion.div>
           </div>
 
           {/* DECISION FLOW SKETCH PAPER stacked at bottom of column */}
@@ -213,13 +182,12 @@ export default function Hero() {
             <div className="relative aspect-square w-full bg-[#18112c] rounded overflow-hidden flex items-center justify-center p-3 text-white border border-slate-300 shadow-inner">
               <div className="absolute inset-0 bg-[#160f2d] opacity-20 pattern-grid-lg" />
               
-             <img 
-             
-  src="/pfp pic.png" 
-  alt="Pratyasha Basak" 
-  className="w-full h-full object-cover rounded-2xl" 
-/>
-</div>
+              <img 
+                src="/pfp pic.png" 
+                alt="Pratyasha Basak" 
+                className="relative z-10 w-full h-full object-cover rounded-2xl" 
+              />
+            </div>
             <div className="mt-4 text-center">
               <p className="font-handwritten text-slate-800 font-bold text-xs tracking-tight">
                 Scroll to explore 👇
@@ -243,7 +211,6 @@ export default function Hero() {
             
             <div className="font-mono text-[10px] font-black uppercase text-emerald-700 tracking-wider mb-2.5 mt-2 flex items-center justify-between pb-1 border-b border-emerald-200/50">
               <span>Currently</span>
-              
             </div>
 
             <ul className="text-xs font-handwritten font-bold space-y-2 mt-1">
@@ -325,16 +292,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* REGULAR RESUME PDF BUTTON badge-styled */}
+          {/* REGULAR RESUME PDF BUTTON - Changed to an anchor link pointing directly to /Pratyasha_Basak_Resume.pdf */}
           <motion.div className="flex justify-center max-w-[280px] mx-auto w-full">
-            <motion.button
-              onClick={handleDownloadResume}
+            <motion.a
+              href="/Pratyasha_Basak_Resume.pdf"
+              download="Pratyasha_Basak_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4.5 rounded-2xl border-2 border-[#b59f7b] bg-[#fbf9f5] hover:bg-white text-slate-800 shadow-[3px_3px_0px_#8f7e63] font-handwritten font-bold text-xs leading-none transition-all cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4.5 rounded-2xl border-2 border-[#b59f7b] bg-[#fbf9f5] hover:bg-white text-slate-800 shadow-[3px_3px_0px_#8f7e63] font-handwritten font-bold text-xs leading-none transition-all cursor-pointer text-center no-underline decoration-0"
             >
               <FileText size={15} className="text-[#6366f1]" /> Download Resume PDF 💾
-            </motion.button>
+            </motion.a>
           </motion.div>
 
         </div>
