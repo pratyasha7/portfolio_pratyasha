@@ -121,7 +121,7 @@ export default function Hero() {
               <div className="pt-2">
                 <Percent size={20} strokeWidth={2.5} className="text-amber-500 mb-2.5" />
                 <h3 className="font-sans text-xs font-bold leading-tight text-slate-800">CGPA</h3>
-                <p className="font-handwritten text-md font-black text-rose-600 mt-0.5">8.65 / 10</p>
+                <p className="font-handwritten text-md font-black text-rose-600 mt-0.5">8.66 / 10</p>
               </div>
               <p className="text-[10px] font-mono text-slate-400 mt-2">Cumulative score</p>
             </motion.div>
