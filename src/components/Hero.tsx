@@ -295,14 +295,16 @@ export default function Hero() {
           {/* REGULAR RESUME PDF BUTTON - Changed to an anchor link pointing directly to /Pratyasha_Basak_Resume.pdf */}
           <motion.div className="flex justify-center max-w-[280px] mx-auto w-full">
             <motion.a
-              href="/Pratyasha_Basak_Resume.pdf"
-              download="Pratyasha_Basak_Resume.pdf"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4.5 rounded-2xl border-2 border-[#b59f7b] bg-[#fbf9f5] hover:bg-white text-slate-800 shadow-[3px_3px_0px_#8f7e63] font-handwritten font-bold text-xs leading-none transition-all cursor-pointer text-center no-underline decoration-0"
-            >
-              <FileText size={15} className="text-[#6366f1]" /> Download Resume PDF 💾
-            </motion.a>
+  href="/Pratyasha_Basak_Resume.pdf?v=2026"
+  download="Pratyasha_Basak_Resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="w-full flex items-center justify-center gap-2 py-3 px-4.5 rounded-2xl border-2 border-[#b59f7b] bg-[#fbf9f5] hover:bg-white text-slate-800 shadow-[3px_3px_0px_#8f7e63] font-handwritten font-bold text-xs leading-none transition-all cursor-pointer text-center no-underline decoration-0"
+>
+  <FileText size={15} className="text-[#6366f1]" /> Download Resume PDF 💾
+</motion.a>
           </motion.div>
 
         </div>
