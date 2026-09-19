@@ -50,7 +50,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-handwritten text-md sm:text-xl font-bold text-[#6366f1] leading-relaxed mb-4"
             >
-              Software Engineer &amp; Research Intern
+              Frontend Engineer &amp; Data Specialist 
             </motion.p>
 
             <motion.p
