@@ -169,6 +169,22 @@ export const PROJECTS_DATA: Project[] = [
     technologies: ["JavaScript", "Firebase", "Google Maps API", "Python", "Image Classification"],
     githubUrl: "https://github.com/pratyasha7/spot-n-fix",
     demoUrl: "#"
+  },
+  {
+    id: "project-4",
+    title: "Saaya MRV Platform (Ongoing Opensource Project)",
+    category: "Systems/Backend",
+    description: "Production architecture for automated environmental reporting with satellite pipelines, featuring a unified source adapter layer and automated georeferenced data management.",
+    bullets: [
+      "Reorganized the platform’s core React frontend to use reusable, modular components, simplifying feature integration and maintainability across 15+ modules.",
+      "Built a unified data adapter layer in TypeScript connecting frontend to Google Firestore, REST APIs, and satellite imagery, reducing data source integration time by ~60%.",
+      "Created an interactive 24-hour timeline player on a React-Leaflet map for smooth, step-by-step coordinate tracking of tracking pointers.",
+      "Developed interactive charts and map overlays displaying satellite-based plant health (NDVI) data over time to monitor environmental changes.",
+      "Created an automated map placement tool generating 500+ location markers from coordinate datasets and built bulk CSV upload with Leaflet marker clusters."
+    ],
+    technologies: ["React", "TypeScript", "Firestore", "REST APIs", "Leaflet", "GeoTIFF"],
+    gitlabUrl: "https://gitlab.com/project-saaya/saaya/-/tree/feature/poi-marker-update?ref_type=heads",
+    demoUrl: "#"
   }
 ];
 
