@@ -126,22 +126,6 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: "project-1",
-    title: "Redrob Nexus — AI-Native Research Operating System (Ongoing)",
-    category: "AI/ML",
-    description: "Architecting an AI-native research operating system and professional network designed to consolidate paper discovery, collaborative writing, and social research sharing into a unified ecosystem.",
-    bullets: [
-      "Designing a hybrid semantic search and retrieval pipeline (combining BM25 keyword matching with dense vector embeddings and rerankers) to facilitate context-aware, natural language queries across open-source scientific APIs.",
-      "Architecting an agentic orchestration system utilizing a multi-agent planning framework—incorporating specialized Copilot, Retrieval, Synthesis, and Knowledge Graph agents—to automate complex analytical workflows.",
-      "Developing a researcher-exclusive social media layer allowing peers to publish paper links, host AI-generated summaries, and interact through comments, likes, and professional connection maps.",
-      "Implementing multi-author collaborative writing environments alongside private workspaces equipped with dynamic tools to organize, categorize, and draft scientific research papers.",
-      "Integrating a structured RAG (Retrieval-Augmented Generation) pipeline paired with Neo4j graph databases to securely feed factual context into collaborative documents and verify citations."
-    ],
-    technologies: ["Python", "FastAPI", "LLMs (GPT-4o/Claude)", "Pinecone/Weaviate", "Neo4j Graph DB", "WebSockets", "RAG", "Multi-Agent Systems", "TypeScript", "BM25"],
-    githubUrl: "https://github.com/pratyasha7/AI-Scientific-Paper-Knowledge-Engine",
-    demoUrl: "#"
-  },
-  {
-    id: "project-2",
     title: "DART — Decentralized Triangulation System",
     category: "Systems/Backend",
     description: "Edge-computed acoustic surveillance engine designed to classify gunshot transients against ambient environmental noise and perform decentralized triangulation.",
@@ -157,22 +141,8 @@ export const PROJECTS_DATA: Project[] = [
     demoUrl: "#"
   },
   {
-    id: "project-3",
-    title: "SpotNFix — Crowdsourced Civic Issue Reporting Platform",
-    category: "Systems/Backend",
-    description: "Web-based system for reporting civic issues using HTML, CSS, JavaScript, and Firebase, featuring interactive map integration and on-device intelligent content validation.",
-    bullets: [
-      "Built a web-based system for reporting civic issues with robust frontend flows using HTML, CSS, and vanilla JavaScript.",
-      "Integrated Google Maps API for auto-location and interactive issue visualization directly on high-contrast overlays.",
-      "Implemented an image classification pipeline by integrating pre-trained image classification endpoints for automated content verification, duplicate detection, and issue categorization to reduce invalid report submissions."
-    ],
-    technologies: ["JavaScript", "Firebase", "Google Maps API", "Python", "Image Classification"],
-    githubUrl: "https://github.com/pratyasha7/spot-n-fix",
-    demoUrl: "#"
-  },
-  {
-    id: "project-4",
-    title: "Saaya MRV Platform (Ongoing Opensource Project)",
+    id: "project-2",
+    title: "Saaya MRV Platform (Opensource Project)",
     category: "Systems/Backend",
     description: "Production architecture for automated environmental reporting with satellite pipelines, featuring a unified source adapter layer and automated georeferenced data management.",
     bullets: [
@@ -184,6 +154,36 @@ export const PROJECTS_DATA: Project[] = [
     ],
     technologies: ["React", "TypeScript", "Firestore", "REST APIs", "Leaflet", "GeoTIFF"],
     gitlabUrl: "https://gitlab.com/project-saaya/saaya/-/tree/feature/poi-marker-update?ref_type=heads",
+    demoUrl: "#"
+  },
+  {
+    id: "project-3",
+    title: "Redrob Nexus — AI-Native Research Operating System",
+    category: "AI/ML",
+    description: "Architecting an AI-native research operating system and professional network designed to consolidate paper discovery, collaborative writing, and social research sharing into a unified ecosystem.",
+    bullets: [
+      "Designing a hybrid semantic search and retrieval pipeline (combining BM25 keyword matching with dense vector embeddings and rerankers) to facilitate context-aware, natural language queries across open-source scientific APIs.",
+      "Architecting an agentic orchestration system utilizing a multi-agent planning framework—incorporating specialized Copilot, Retrieval, Synthesis, and Knowledge Graph agents—to automate complex analytical workflows.",
+      "Developing a researcher-exclusive social media layer allowing peers to publish paper links, host AI-generated summaries, and interact through comments, likes, and professional connection maps.",
+      "Implementing multi-author collaborative writing environments alongside private workspaces equipped with dynamic tools to organize, categorize, and draft scientific research papers.",
+      "Integrating a structured RAG (Retrieval-Augmented Generation) pipeline paired with Neo4j graph databases to securely feed factual context into collaborative documents and verify citations."
+    ],
+    technologies: ["Python", "FastAPI", "LLMs (GPT-4o/Claude)", "Pinecone/Weaviate", "Neo4j Graph DB", "WebSockets", "RAG", "Multi-Agent Systems", "TypeScript", "BM25"],
+    githubUrl: "https://github.com/pratyasha7/AI-Scientific-Paper-Knowledge-Engine",
+    demoUrl: "#"
+  },
+  {
+    id: "project-4",
+    title: "SpotNFix — Crowdsourced Civic Issue Reporting Platform",
+    category: "Systems/Backend",
+    description: "Web-based system for reporting civic issues using HTML, CSS, JavaScript, and Firebase, featuring interactive map integration and on-device intelligent content validation.",
+    bullets: [
+      "Built a web-based system for reporting civic issues with robust frontend flows using HTML, CSS, and vanilla JavaScript.",
+      "Integrated Google Maps API for auto-location and interactive issue visualization directly on high-contrast overlays.",
+      "Implemented an image classification pipeline by integrating pre-trained image classification endpoints for automated content verification, duplicate detection, and issue categorization to reduce invalid report submissions."
+    ],
+    technologies: ["JavaScript", "Firebase", "Google Maps API", "Python", "Image Classification"],
+    githubUrl: "https://github.com/pratyasha7/spot-n-fix",
     demoUrl: "#"
   }
 ];

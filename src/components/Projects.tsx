@@ -83,24 +83,7 @@ export default function Projects() {
   const getSimulatedScreen = (projectId: string) => {
     switch (projectId) {
       case "project-1":
-        return (
-          <div className="bg-[#140f28] border-2 border-slate-300 rounded-lg p-3.5 h-28 font-mono text-[9px] flex flex-col justify-between text-indigo-200 shadow-inner">
-            <div className="flex items-center gap-1.5 bg-[#1d143c] p-1 rounded-md border border-[#ff4e88]/20">
-              <Search size={9} className="text-[#ff4e88] animate-pulse" />
-              <span className="text-[#a855f7] font-semibold text-[8px]">q: "POP" (Power Optimization)</span>
-            </div>
-            <div className="text-[8px] space-y-1 overflow-hidden select-none leading-normal">
-              <p className="text-green-400 font-bold">&gt;&gt; Disambiguating...</p>
-              <p className="text-gray-400">1. POP (Post Office Protocol) - 3 papers</p>
-              <p className="text-purple-300 font-bold">2. POP (Predictive Operations) - 12 papers [Active]</p>
-            </div>
-            <div className="flex justify-between items-center text-[7.5px] border-t border-[#1d143c] pt-1">
-              <span className="text-gray-400">NLP Concept Mapping</span>
-              <span className="text-green-400 font-bold">99.8% precision</span>
-            </div>
-          </div>
-        );
-      case "project-2":
+      case "dart":
         return (
           <div className="bg-[#0b1528] border-2 border-slate-300 rounded-lg p-3 h-28 font-mono text-[9px] relative overflow-hidden flex flex-col justify-between shadow-inner">
             <div className="flex justify-between items-center text-[8px] border-b border-blue-950 pb-1">
@@ -125,7 +108,8 @@ export default function Projects() {
             </div>
           </div>
         );
-      case "project-4":
+      case "project-2":
+      case "saaya":
         return (
           <div className="bg-[#0f172a] border-2 border-slate-300 rounded-lg p-3 h-28 font-mono text-[9px] relative overflow-hidden flex flex-col justify-between shadow-inner">
             <div className="flex justify-between items-center text-[8px] border-b border-slate-800 pb-1">
@@ -145,6 +129,26 @@ export default function Projects() {
           </div>
         );
       case "project-3":
+      case "redrob":
+        return (
+          <div className="bg-[#140f28] border-2 border-slate-300 rounded-lg p-3.5 h-28 font-mono text-[9px] flex flex-col justify-between text-indigo-200 shadow-inner">
+            <div className="flex items-center gap-1.5 bg-[#1d143c] p-1 rounded-md border border-[#ff4e88]/20">
+              <Search size={9} className="text-[#ff4e88] animate-pulse" />
+              <span className="text-[#a855f7] font-semibold text-[8px]">q: "POP" (Power Optimization)</span>
+            </div>
+            <div className="text-[8px] space-y-1 overflow-hidden select-none leading-normal">
+              <p className="text-green-400 font-bold">&gt;&gt; Disambiguating...</p>
+              <p className="text-gray-400">1. POP (Post Office Protocol) - 3 papers</p>
+              <p className="text-purple-300 font-bold">2. POP (Predictive Operations) - 12 papers [Active]</p>
+            </div>
+            <div className="flex justify-between items-center text-[7.5px] border-t border-[#1d143c] pt-1">
+              <span className="text-gray-400">NLP Concept Mapping</span>
+              <span className="text-green-400 font-bold">99.8% precision</span>
+            </div>
+          </div>
+        );
+      case "project-4":
+      case "spotnfix":
       default:
         return (
           <div className="bg-[#111827] border-2 border-slate-300 rounded-lg p-3 h-28 font-mono text-[9px] flex flex-col justify-between shadow-inner">
