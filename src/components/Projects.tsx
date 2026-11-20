@@ -429,63 +429,32 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Slider Bottom Navigation Bar */}
+        {/* Slider Bottom Indicator Dots */}
         {filteredProjects.length > 1 && (
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-4 pt-4 border-t border-[#ebdccd]">
-            {/* Left: Previous Button */}
-            <button
-              onClick={() => scroll("left")}
-              disabled={!canScrollLeft}
-              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-mono text-xs font-bold transition-all ${
-                canScrollLeft
-                  ? "bg-white text-slate-700 border-2 border-[#d0c2b2] hover:border-[#6366f1] hover:text-[#6366f1] shadow-[2px_2px_0px_rgba(138,119,9e,0.3)] hover:-translate-y-0.5 cursor-pointer active:translate-y-0"
-                  : "bg-slate-100/60 text-slate-300 border border-slate-200 cursor-not-allowed"
-              }`}
-            >
-              <ChevronLeft size={14} />
-              <span>Previous</span>
-            </button>
-
-            {/* Center: Slide indicator dots */}
-            <div className="flex items-center gap-2">
-              <span className="font-handwritten text-xs font-bold text-slate-500 mr-1 select-none">
-                Project Catalog:
-              </span>
-              {filteredProjects.map((proj, idx) => {
-                const isCurrent = idx === activeIndex;
-                return (
-                  <button
-                    key={proj.id}
-                    onClick={() => scrollToProject(idx)}
-                    aria-label={`Jump to project 0${idx + 1}`}
-                    title={`0${idx + 1}: ${proj.title.split("—")[0].trim()}`}
-                    className={`group relative transition-all duration-300 cursor-pointer ${
-                      isCurrent
-                        ? "w-8 h-2.5 bg-[#6366f1] rounded-full shadow-sm"
-                        : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full"
-                    }`}
-                  >
-                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block bg-slate-800 text-white font-mono text-[9px] px-2 py-1 rounded shadow-md whitespace-nowrap z-30 pointer-events-none">
-                      0{idx + 1}: {proj.title.split("—")[0].trim()}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Right: Next Button */}
-            <button
-              onClick={() => scroll("right")}
-              disabled={!canScrollRight}
-              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-mono text-xs font-bold transition-all ${
-                canScrollRight
-                  ? "bg-[#6366f1] text-white border-2 border-[#6366f1] hover:bg-[#5254d8] shadow-[2px_2px_0px_rgba(99,102,241,0.4)] hover:-translate-y-0.5 cursor-pointer font-black active:translate-y-0"
-                  : "bg-slate-100/60 text-slate-300 border border-slate-200 cursor-not-allowed"
-              }`}
-            >
-              <span>Next Project</span>
-              <ChevronRight size={14} />
-            </button>
+          <div className="flex items-center justify-center gap-2 mt-4 pt-4 border-t border-[#ebdccd]">
+            <span className="font-handwritten text-xs font-bold text-slate-500 mr-1 select-none">
+              Project Catalog:
+            </span>
+            {filteredProjects.map((proj, idx) => {
+              const isCurrent = idx === activeIndex;
+              return (
+                <button
+                  key={proj.id}
+                  onClick={() => scrollToProject(idx)}
+                  aria-label={`Jump to project 0${idx + 1}`}
+                  title={`0${idx + 1}: ${proj.title.split("—")[0].trim()}`}
+                  className={`group relative transition-all duration-300 cursor-pointer ${
+                    isCurrent
+                      ? "w-8 h-2.5 bg-[#6366f1] rounded-full shadow-sm"
+                      : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full"
+                  }`}
+                >
+                  <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block bg-slate-800 text-white font-mono text-[9px] px-2 py-1 rounded shadow-md whitespace-nowrap z-30 pointer-events-none">
+                    0{idx + 1}: {proj.title.split("—")[0].trim()}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         )}
 
