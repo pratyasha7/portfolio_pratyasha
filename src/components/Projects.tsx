@@ -183,7 +183,7 @@ export default function Projects() {
       </div>
 
       {/* Main Binder container */}
-      <div className="bg-[#ede2d6] border-2 border-[#d0c2b2] rounded-3xl p-6 sm:p-10 shadow-[6px_6px_0px_rgba(138,119,9e,0.5)] relative overflow-hidden">
+      <div className="bg-[#ede2d6] border-2 border-[#d0c2b2] rounded-3xl p-6 sm:p-10 shadow-[6px_6px_0px_rgba(138,119,9e,0.5)] relative">
         
         {/* Binder metal rings design of physical notebook folder (the spine holes) */}
         <div className="absolute top-0 left-10 right-10 h-6 flex justify-around pointer-events-none">
@@ -275,28 +275,37 @@ export default function Projects() {
 
         {/* Paper Cards Slider Container */}
         <div className="relative">
-          {/* Floating Left Navigation Arrow (Desktop/Tablet) */}
-          {canScrollLeft && (
-            <button
-              onClick={() => scroll("left")}
-              aria-label="Previous projects"
-              title="Previous projects"
-              className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 items-center justify-center rounded-full bg-white/95 border-2 border-[#d0c2b2] text-slate-700 shadow-[2px_3px_0px_rgba(138,119,9e,0.4)] hover:bg-[#6366f1] hover:text-white hover:border-[#6366f1] hover:scale-105 active:scale-95 transition-all cursor-pointer"
-            >
-              <ChevronLeft size={18} />
-            </button>
-          )}
+          {/* Floating Navigation Arrows mounted on the boundary wall of the outside box */}
+          {filteredProjects.length > 1 && (
+            <>
+              <button
+                onClick={() => scroll("left")}
+                disabled={!canScrollLeft}
+                aria-label="Previous projects"
+                title="Previous projects"
+                className={`hidden md:flex absolute -left-6 sm:-left-10 -translate-x-1/2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center rounded-full transition-all ${
+                  canScrollLeft
+                    ? "bg-white border-2 border-[#d0c2b2] text-slate-700 shadow-[2px_3px_0px_rgba(138,119,9e,0.4)] hover:bg-[#6366f1] hover:text-white hover:border-[#6366f1] hover:scale-110 active:scale-95 cursor-pointer"
+                    : "bg-white/60 border border-[#e6decb] text-slate-300 opacity-25 cursor-not-allowed pointer-events-none"
+                }`}
+              >
+                <ChevronLeft size={20} />
+              </button>
 
-          {/* Floating Right Navigation Arrow (Desktop/Tablet) */}
-          {canScrollRight && (
-            <button
-              onClick={() => scroll("right")}
-              aria-label="Next projects"
-              title="Next projects"
-              className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 items-center justify-center rounded-full bg-white/95 border-2 border-[#d0c2b2] text-slate-700 shadow-[2px_3px_0px_rgba(138,119,9e,0.4)] hover:bg-[#6366f1] hover:text-white hover:border-[#6366f1] hover:scale-105 active:scale-95 transition-all cursor-pointer animate-pulse hover:animate-none"
-            >
-              <ChevronRight size={18} />
-            </button>
+              <button
+                onClick={() => scroll("right")}
+                disabled={!canScrollRight}
+                aria-label="Next projects"
+                title="Next projects"
+                className={`hidden md:flex absolute -right-6 sm:-right-10 translate-x-1/2 top-1/2 -translate-y-1/2 z-30 w-10 h-10 items-center justify-center rounded-full transition-all ${
+                  canScrollRight
+                    ? "bg-white border-2 border-[#d0c2b2] text-slate-700 shadow-[2px_3px_0px_rgba(138,119,9e,0.4)] hover:bg-[#6366f1] hover:text-white hover:border-[#6366f1] hover:scale-110 active:scale-95 cursor-pointer animate-pulse hover:animate-none"
+                    : "bg-white/60 border border-[#e6decb] text-slate-300 opacity-25 cursor-not-allowed pointer-events-none"
+                }`}
+              >
+                <ChevronRight size={20} />
+              </button>
+            </>
           )}
 
           {/* Scrollable Track */}
