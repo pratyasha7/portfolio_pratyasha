@@ -185,6 +185,21 @@ export const PROJECTS_DATA: Project[] = [
     technologies: ["JavaScript", "Firebase", "Google Maps API", "Python", "Image Classification"],
     githubUrl: "https://github.com/pratyasha7/spot-n-fix",
     demoUrl: "#"
+  },
+  {
+    id: "project-5",
+    title: "ReachInbox — Distributed Outbound Email Dispatcher",
+    category: "Systems/Backend",
+    description: "Full-stack outbound cold email scheduler and automation platform engineered for delayed multi-recipient dispatches, hourly provider rate-limiting, and live observability.",
+    bullets: [
+      "Engineered a resilient distributed queue pipeline with BullMQ & Redis, executing non-blocking delayed email batches with configurable per-recipient intervals (2–5s) and DB idempotency checks.",
+      "Implemented sliding-window provider rate limiting (20/hr cap) using atomic Redis Sorted Sets (ZCOUNT/ZADD) with automated job rescheduling and real-time Slack webhook alerts.",
+      "Built a real-time outreach dashboard in Next.js (App Router, React 19) featuring 0ms in-memory search decoupled from silent 3-second background status syncing.",
+      "Integrated Google OAuth 2.0 with session persistence, modal sequence editor with CSV lead ingestion, and Prisma ORM on Neon PostgreSQL synced with Elasticsearch."
+    ],
+    technologies: ["Next.js", "TypeScript", "Node.js", "Redis (BullMQ)", "PostgreSQL", "Prisma", "Elasticsearch", "Tailwind CSS"],
+    githubUrl: "https://github.com/pratyasha7/reachinbox",
+    demoUrl: "https://reachinbox-delta-three.vercel.app"
   }
 ];
 

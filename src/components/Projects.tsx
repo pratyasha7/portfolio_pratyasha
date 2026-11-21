@@ -149,7 +149,6 @@ export default function Projects() {
         );
       case "project-4":
       case "spotnfix":
-      default:
         return (
           <div className="bg-[#111827] border-2 border-slate-300 rounded-lg p-3 h-28 font-mono text-[9px] flex flex-col justify-between shadow-inner">
             <div className="flex items-center gap-1.5 bg-[#1f2937] p-1 rounded-md text-rose-300 border border-[#f43f5e]/25">
@@ -165,6 +164,27 @@ export default function Projects() {
             <p className="text-[7px] text-slate-500 leading-tight">
               Model output: duplicate coordinates pruned. Validated submission safely in Google Firestore.
             </p>
+          </div>
+        );
+      case "project-5":
+      case "reachinbox":
+      default:
+        return (
+          <div className="border-2 border-slate-300 rounded-lg h-28 relative overflow-hidden shadow-inner group/screen bg-slate-900">
+            <img 
+              src="/reachinbox.jpg" 
+              alt="ReachInbox Outreach Dashboard" 
+              className="w-full h-full object-cover object-top transition-transform duration-300 group-hover/screen:scale-105"
+            />
+            <div className="absolute top-1 left-1.5 flex items-center gap-1.5 bg-slate-900/85 backdrop-blur-xs px-2 py-0.5 rounded border border-white/10 text-[7.5px] font-mono text-pink-200 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-bold text-white">ReachInbox</span>
+              <span className="text-slate-400">|</span>
+              <span className="text-pink-300">Outreach Dashboard</span>
+            </div>
+            <div className="absolute bottom-1 right-1.5 flex items-center gap-1 bg-slate-900/85 backdrop-blur-xs px-1.5 py-0.5 rounded text-[7px] font-mono text-emerald-300 border border-emerald-500/20 shadow-sm">
+              <span>20/hr Throttle Active</span>
+            </div>
           </div>
         );
     }
@@ -394,7 +414,7 @@ export default function Projects() {
                         </div>
 
                         {/* Code Link badge sticker */}
-                        <div className="flex-shrink-0">
+                        <div className="flex-shrink-0 flex items-center gap-1.5">
                           {project.githubUrl && (
                             <a 
                               href={project.githubUrl} 
@@ -415,6 +435,17 @@ export default function Projects() {
                             >
                               <Gitlab size={9} strokeWidth={2.5} />
                               <span>gitlab</span>
+                            </a>
+                          )}
+                          {project.demoUrl && project.demoUrl !== "#" && (
+                            <a 
+                              href={project.demoUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 bg-[#fdf2f8] text-[#be185d] hover:bg-[#ec4899] hover:text-white py-1 px-2 border border-pink-200 rounded-md text-[9px] font-mono font-bold transition-all"
+                            >
+                              <ExternalLink size={9} />
+                              <span>live demo</span>
                             </a>
                           )}
                         </div>
