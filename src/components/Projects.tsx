@@ -14,6 +14,9 @@ export default function Projects() {
 
   const filteredProjects = PROJECTS_DATA.filter((project) => {
     if (filter === "All") return true;
+    if (project.categories) {
+      return project.categories.includes(filter);
+    }
     return project.category === filter;
   });
 
@@ -339,9 +342,6 @@ export default function Projects() {
                 const cardOffsetRotation = index % 2 === 0 ? "rotate-[-1.5deg]" : "rotate-[1deg]";
                 
                 const indexString = index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
-                const badgeTheme = project.category === "AI/ML" 
-                  ? "bg-[#ffebee] text-rose-800 border-rose-200" 
-                  : "bg-[#e8f5e9] text-emerald-800 border-emerald-200";
 
                 return (
                   <div
@@ -371,9 +371,20 @@ export default function Projects() {
                           <span className="font-handwritten text-lg font-black text-[#5c3e35]/35">
                             {indexString}
                           </span>
-                          <span className={`text-[9px] font-mono font-bold uppercase border rounded px-1.5 py-0.5 leading-none ${badgeTheme}`}>
-                            {project.category}
-                          </span>
+                          <div className="flex flex-wrap items-center gap-1">
+                            {(project.categories || [project.category]).map((cat) => (
+                              <span
+                                key={cat}
+                                className={`text-[9px] font-mono font-bold uppercase border rounded px-1.5 py-0.5 leading-none ${
+                                  cat === "AI/ML"
+                                    ? "bg-[#ffebee] text-rose-800 border-rose-200"
+                                    : "bg-[#e8f5e9] text-emerald-800 border-emerald-200"
+                                }`}
+                              >
+                                {cat}
+                              </span>
+                            ))}
+                          </div>
                         </div>
 
                         {/* Integrated Simulated Terminal Graphics screen */}

@@ -1,7 +1,8 @@
 export interface Project {
   id: string;
   title: string;
-  category: 'Systems/Backend' | 'AI/ML';
+  category: 'Systems/Backend' | 'AI/ML' | 'Systems & AI/ML' | string;
+  categories?: ('Systems/Backend' | 'AI/ML')[];
   description: string;
   bullets: string[];
   technologies: string[];

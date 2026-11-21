@@ -127,7 +127,8 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "project-1",
     title: "DART — Decentralized Triangulation System",
-    category: "Systems/Backend",
+    category: "Systems & AI/ML",
+    categories: ["Systems/Backend", "AI/ML"],
     description: "Edge-computed acoustic surveillance engine designed to classify gunshot transients against ambient environmental noise and perform decentralized triangulation.",
     bullets: [
       "Developed an edge-computed acoustic surveillance engine using an INT8 quantized TensorFlow Lite deep neural network to classify gunshot transients against ambient environmental noise from sliding-window Mel spectrograms.",
