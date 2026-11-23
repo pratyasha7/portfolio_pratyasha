@@ -132,21 +132,30 @@ export default function Projects() {
           </div>
         );
       case "project-3":
+      case "researchiq":
       case "redrob":
         return (
-          <div className="bg-[#140f28] border-2 border-slate-300 rounded-lg p-3.5 h-28 font-mono text-[9px] flex flex-col justify-between text-indigo-200 shadow-inner">
-            <div className="flex items-center gap-1.5 bg-[#1d143c] p-1 rounded-md border border-[#ff4e88]/20">
-              <Search size={9} className="text-[#ff4e88] animate-pulse" />
-              <span className="text-[#a855f7] font-semibold text-[8px]">q: "POP" (Power Optimization)</span>
+          <div className="bg-[#140f28] border-2 border-slate-300 rounded-lg p-3 h-28 font-mono text-[9px] relative overflow-hidden flex flex-col justify-between text-indigo-200 shadow-inner">
+            <div className="flex items-center justify-between border-b border-indigo-900/60 pb-1 text-[8px]">
+              <div className="flex items-center gap-1.5 text-pink-300 font-bold">
+                <Search size={8} className="text-pink-400 animate-pulse" />
+                <span>q: "LLM" &gt; expanded</span>
+              </div>
+              <span className="text-emerald-400 font-bold uppercase animate-pulse">RAG Active</span>
             </div>
-            <div className="text-[8px] space-y-1 overflow-hidden select-none leading-normal">
-              <p className="text-green-400 font-bold">&gt;&gt; Disambiguating...</p>
-              <p className="text-gray-400">1. POP (Post Office Protocol) - 3 papers</p>
-              <p className="text-purple-300 font-bold">2. POP (Predictive Operations) - 12 papers [Active]</p>
+            <div className="text-[7.5px] space-y-0.5 leading-tight select-none">
+              <div className="flex justify-between text-slate-300">
+                <span>ChromaDB Hybrid Rerank:</span>
+                <span className="text-cyan-300 font-bold">Score: 0.942</span>
+              </div>
+              <div className="w-full bg-indigo-950 rounded-full h-1 overflow-hidden">
+                <div className="bg-gradient-to-r from-pink-500 via-indigo-400 to-cyan-400 h-1 rounded-full w-[94%]" />
+              </div>
+              <p className="text-slate-400 text-[7px] truncate">Gemini 2.5 Flash: Synthesized 5 grounded citations</p>
             </div>
-            <div className="flex justify-between items-center text-[7.5px] border-t border-[#1d143c] pt-1">
-              <span className="text-gray-400">NLP Concept Mapping</span>
-              <span className="text-green-400 font-bold">99.8% precision</span>
+            <div className="flex justify-between items-center text-[7px] border-t border-indigo-900/60 pt-1 text-slate-400">
+              <span>ONNX 384d Dense Vectors</span>
+              <span className="text-emerald-400 font-bold">&lt;2ms Latency</span>
             </div>
           </div>
         );

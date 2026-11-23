@@ -159,17 +159,16 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: "project-3",
-    title: "Redrob Nexus — AI-Native Research Operating System",
+    title: "ResearchIQ — AI Scientific Paper Knowledge Engine",
     category: "AI/ML",
-    description: "Architecting an AI-native research operating system and professional network designed to consolidate paper discovery, collaborative writing, and social research sharing into a unified ecosystem.",
+    description: "AI-powered scientific paper knowledge engine and literature workspace featuring hybrid semantic search, ChromaDB vector RAG retrieval, and real-time generative research synthesis.",
     bullets: [
-      "Designing a hybrid semantic search and retrieval pipeline (combining BM25 keyword matching with dense vector embeddings and rerankers) to facilitate context-aware, natural language queries across open-source scientific APIs.",
-      "Architecting an agentic orchestration system utilizing a multi-agent planning framework—incorporating specialized Copilot, Retrieval, Synthesis, and Knowledge Graph agents—to automate complex analytical workflows.",
-      "Developing a researcher-exclusive social media layer allowing peers to publish paper links, host AI-generated summaries, and interact through comments, likes, and professional connection maps.",
-      "Implementing multi-author collaborative writing environments alongside private workspaces equipped with dynamic tools to organize, categorize, and draft scientific research papers.",
-      "Integrating a structured RAG (Retrieval-Augmented Generation) pipeline paired with Neo4j graph databases to securely feed factual context into collaborative documents and verify citations."
+      "Engineered a dual-arm hybrid search pipeline blending lexical keyword matching with ChromaDB vector similarity, scientific acronym expansion (LLM, GNN, NERF), and a 5-factor weighted reranking algorithm.",
+      "Integrated an embedded AI Literature Assistant utilizing Google Gemini 2.5 Flash with ChromaDB RAG context injection across a 5,000-paper catalog, featuring deterministic grounded fallback.",
+      "Implemented <2ms semantic paper recommendations using 3,000 precomputed nearest-neighbor relationship edges, dynamic vector embedding fallback, and multi-format citation export (BibTeX, APA, MLA, RIS).",
+      "Built collaborative research workspaces in Next.js 15 (React 19) and FastAPI with Kanban task pipelines, markdown notes, personal libraries, and 34,700+ discipline taxonomy filters."
     ],
-    technologies: ["Python", "FastAPI", "LLMs (GPT-4o/Claude)", "Pinecone/Weaviate", "Neo4j Graph DB", "WebSockets", "RAG", "Multi-Agent Systems", "TypeScript", "BM25"],
+    technologies: ["FastAPI", "Python", "Next.js 15", "ChromaDB", "Gemini 2.5 Flash", "ONNX", "SQLite", "RAG", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/pratyasha7/AI-Scientific-Paper-Knowledge-Engine",
     demoUrl: "#"
   },
